@@ -1,6 +1,6 @@
 import { compile, env, normalizePath } from '@tailwindcss/node'
 import { clearRequireCache } from '@tailwindcss/node/require-cache'
-import { Scanner } from '@tailwindcss/oxide'
+import { Scanner } from './simple-scanner'
 import { Features, transform } from 'lightningcss'
 import fs from 'node:fs/promises'
 import path from 'node:path'
