@@ -12,7 +12,6 @@
       "persistent": true
     }
   },
-  
-  
-  "globalPassThroughEnv": ["RUSTUP_HOME"]
+  "globalDotEnv": [".env"],
+  "globalDependencies": ["package.json", "turbo.json"]
 }
