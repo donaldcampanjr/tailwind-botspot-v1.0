@@ -1,5 +1,5 @@
 import { expect, test, type Page } from '@playwright/test'
-import { Scanner } from '@tailwindcss/oxide'
+import { Scanner } from './simple-scanner'
 import fs from 'node:fs'
 import path from 'node:path'
 import { compile } from '../src'
