@@ -69,7 +69,7 @@ function tailwindcss(opts: PluginOptions = {}): AcceptedPlugin {
 
             let compiler = await compile(root.toString(), {
               base: inputBasePath,
-              onDependency: (path) => {
+              onDependency: (path: string) => {
                 context.fullRebuildPaths.push(path)
               },
             })
