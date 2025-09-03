@@ -29,7 +29,6 @@
   },
   "dependencies": {
     "@tailwindcss/node": "workspace:^",
-    "@tailwindcss/oxide": "workspace:^",
     "lightningcss": "catalog:",
     "svelte-preprocess": "^6.0.2",
     "tailwindcss": "workspace:^"

@@ -28,7 +28,6 @@
   },
   "dependencies": {
     "@tailwindcss/node": "workspace:^",
-    "@tailwindcss/oxide": "workspace:^",
     "braces": "^3.0.3",
     "dedent": "1.5.3",
     "enhanced-resolve": "^5.17.1",
