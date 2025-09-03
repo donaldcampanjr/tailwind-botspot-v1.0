@@ -28,8 +28,8 @@
   },
   "dependencies": {
     "@tailwindcss/node": "workspace:^",
-    "@tailwindcss/oxide": "workspace:^",
     "braces": "^3.0.3",
+    "glob": "^10.3.10",
     "dedent": "1.5.3",
     "enhanced-resolve": "^5.17.1",
     "globby": "^14.0.2",

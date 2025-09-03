@@ -1,4 +1,4 @@
-import { Scanner } from '@tailwindcss/oxide'
+import { Scanner } from '../simple-scanner'
 import type { Candidate, Variant } from '../../../tailwindcss/src/candidate'
 import type { DesignSystem } from '../../../tailwindcss/src/design-system'
 import * as ValueParser from '../../../tailwindcss/src/value-parser'

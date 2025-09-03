@@ -18,34 +18,34 @@
   },
   "exports": {
     ".": {
+      "types": "./dist/lib.d.mts",
       "style": "./index.css",
-      "types": "./src/index.ts",
       "require": "./dist/lib.js",
-      "import": "./src/index.ts"
-    },
-    "./colors": {
-      "require": "./src/compat/colors.cts",
-      "import": "./src/compat/colors.ts"
-    },
-    "./colors.js": {
-      "require": "./src/compat/colors.cts",
-      "import": "./src/compat/colors.ts"
-    },
-    "./defaultTheme": {
-      "require": "./src/compat/default-theme.cts",
-      "import": "./src/compat/default-theme.ts"
-    },
-    "./defaultTheme.js": {
-      "require": "./src/compat/default-theme.cts",
-      "import": "./src/compat/default-theme.ts"
+      "import": "./dist/lib.mjs"
     },
     "./plugin": {
-      "require": "./src/plugin.cts",
-      "import": "./src/plugin.ts"
+      "require": "./dist/plugin.js",
+      "import": "./dist/plugin.mjs"
     },
     "./plugin.js": {
-      "require": "./src/plugin.cts",
-      "import": "./src/plugin.ts"
+      "require": "./dist/plugin.js",
+      "import": "./dist/plugin.mjs"
+    },
+    "./defaultTheme": {
+      "require": "./dist/default-theme.js",
+      "import": "./dist/default-theme.mjs"
+    },
+    "./defaultTheme.js": {
+      "require": "./dist/default-theme.js",
+      "import": "./dist/default-theme.mjs"
+    },
+    "./colors": {
+      "require": "./dist/colors.js",
+      "import": "./dist/colors.mjs"
+    },
+    "./colors.js": {
+      "require": "./dist/colors.js",
+      "import": "./dist/colors.mjs"
     },
     "./package.json": "./package.json",
     "./index.css": "./index.css",
@@ -111,7 +111,6 @@
     "utilities.css"
   ],
   "devDependencies": {
-    "@tailwindcss/oxide": "workspace:^",
     "@types/node": "catalog:",
     "lightningcss": "catalog:",
     "dedent": "1.5.3"

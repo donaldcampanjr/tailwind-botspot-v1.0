@@ -1,7 +1,7 @@
 import QuickLRU from '@alloc/quick-lru'
 import { compile, env } from '@tailwindcss/node'
 import { clearRequireCache } from '@tailwindcss/node/require-cache'
-import { Scanner } from '@tailwindcss/oxide'
+import { Scanner } from './simple-scanner'
 import { Features, transform } from 'lightningcss'
 import fs from 'node:fs'
 import path from 'node:path'
@@ -69,7 +69,7 @@ function tailwindcss(opts: PluginOptions = {}): AcceptedPlugin {
 
             let compiler = await compile(root.toString(), {
               base: inputBasePath,
-              onDependency: (path) => {
+              onDependency: (path: string) => {
                 context.fullRebuildPaths.push(path)
               },
             })

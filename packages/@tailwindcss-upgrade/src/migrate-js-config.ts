@@ -1,4 +1,4 @@
-import { Scanner } from '@tailwindcss/oxide'
+import { Scanner } from './simple-scanner'
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
