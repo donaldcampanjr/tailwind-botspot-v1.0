@@ -11,7 +11,5 @@
       "cache": false,
       "persistent": true
     }
-  },
-  "globalDotEnv": [".env"],
-  "globalDependencies": ["package.json", "turbo.json"]
+  }
 }
