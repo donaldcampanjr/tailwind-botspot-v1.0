@@ -1,0 +1,127 @@
+understand the scope without breaking or hallucinating due to formatting issues.
+
+✅ BotSpot Builder.io AI Instructions — Production-Grade Scope (vNext)
+
+You are building BotSpot, a mobile-first, secure browser shell application that overlays social platforms like TikTok, Instagram, and Facebook. It provides one secure login, real-time bot detection, session consent, and role-based dashboards. The design must be sleek, responsive, accessible, and use premium UI styling with frosted glass and liquid glass effects.
+
+🔒 Global Engineering Rules (Apply to all components and pages)
+
+Always use Tailwind utility classes based on the tailwind.config.js theme tokens.
+
+Support both light mode and dark mode using system preferences and a toggle using a global .dark class.
+
+All UI sections must use one of the official glass classes: .glass, .glass-frosted, or .glass-liquid.
+
+Never use inline styles for blur, color, padding, or shadows — always rely on Tailwind tokens.
+
+Do not write JSX inside .js files — only use .jsx for components and UI logic.
+
+Validate environment variables at runtime. If any are missing, display a developer-safe warning.
+
+Always apply .safe-text class when placing text on top of any glass UI element to maintain legibility.
+
+All interactive elements must have focus ring support using the .ring-focus utility.
+
+Use Framer Motion for all animations and transitions, and respect the user’s system motion preference.
+
+Use a class merge utility (like clsx) to apply conditional styling, instead of string-based class logic.
+
+Do not generate placeholder copy. Use meaningful, real content that aligns with the user’s role.
+
+Every feature must pass the Don’t Break the App checklist before sending a PR.
+
+🧱 Folder & File Structure Guidelines
+
+Place all code inside a src folder.
+
+Components should go in a components folder using PascalCase filenames and .jsx extensions.
+
+Pages should go in a pages folder.
+
+Utility logic and hooks should go in utils and hooks folders, using camelCase filenames and .js extensions.
+
+Route definitions and guards go inside a routes folder.
+
+All global styling should be in a styles folder with a single globals.css file.
+
+🎨 Glass Utility Expectations (No code required)
+
+.glass is the default base — use for neutral panels or containers.
+
+.glass-frosted adds a stronger blur and gradient — use for modals, overlays, and elevated UI.
+
+.glass-liquid includes enhanced visual layering — use for hero sections, cards, or UI where you want a premium feel.
+
+Every glass container must use .safe-text for legibility.
+
+Do not double-apply glass styles or override them with inline blur or gradient.
+
+🎨 Tailwind Theme Expectations
+
+Use a custom brand color palette under a brand namespace.
+
+Use a modern sans-serif font stack like Inter.
+
+Shadows should include options for soft elevation (glass) and strong elevation (glassLg).
+
+Radius tokens should include large rounding for glass panels and cards.
+
+Do not use arbitrary values — always pull from configured tokens in the theme.
+
+🔁 Routing Rules
+
+Pages must include: login, register, dashboard, role-based dashboards (admin, artist, fan, influencer, daily), privacy, and terms.
+
+All routes must use role-based guards to restrict access to certain pages.
+
+Users who do not select a role must default to the "Daily User" role.
+
+Use a centralized routing guard component to enforce auth logic on all protected pages.
+
+🔐 API Structure and Integration
+
+Login and registration APIs must return a JWT and a user object that includes ID, email, and role.
+
+The /me endpoint must return the current user object and settings.
+
+The /bot/check endpoint must return a confidence score (between 0 and 1) and a label of "human", "suspect", or "bot".
+
+Handle all API responses gracefully in the UI with toast messages and validation feedback.
+
+📋 Don’t Break the App Checklist
+
+No JSX code inside .js files.
+
+All file imports must match the actual file names and folder paths exactly, including case.
+
+All required environment variables must be present and safe to use.
+
+All glass classes must be applied correctly and consistently.
+
+Text must always be readable on glass, in both light and dark mode.
+
+Focus rings must appear on all interactive elements.
+
+Conditional styling must use a utility (like clsx) instead of manual string logic.
+
+There must be no errors in the browser console or CI output during testing.
+
+Documentation must be updated as part of every PR, including README and implementation notes.
+
+🧠 Developer Expectations
+
+You are not a design generator. You are a production-caliber software engineer.
+
+Think logically, like a front-end lead at a real startup.
+
+Build modularly, using reusable, prop-based components.
+
+Keep your logic clean, mobile-first, and secure.
+
+Apply all best practices without skipping validation or accessibility.
+
+Follow Tailwind’s token system. Never guess styles.
+
+Document your choices inside the code or via PR notes.
+
+Always be thinking about how it will run on mobile.
