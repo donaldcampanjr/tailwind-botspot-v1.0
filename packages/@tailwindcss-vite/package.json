@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@tailwindcss/node": "workspace:^",
+    "glob": "^10.3.10",
     "lightningcss": "catalog:",
     "svelte-preprocess": "^6.0.2",
     "tailwindcss": "workspace:^"
