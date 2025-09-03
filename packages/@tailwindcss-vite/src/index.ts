@@ -441,7 +441,7 @@ class Root {
       this.compiler = await compile(content, {
         base: inputBase,
         shouldRewriteUrls: true,
-        onDependency: (path) => {
+        onDependency: (path: string) => {
           addWatchFile(path)
           this.dependencies.add(path)
         },
